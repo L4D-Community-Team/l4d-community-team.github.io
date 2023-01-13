@@ -30212,7 +30212,7 @@ function PageSection(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "row pt-5",
+                className: "row pt-2",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     className: "blood text-uppercase",
                     children: props.title
@@ -30232,6 +30232,13 @@ function PageSection(props) {
             }, void 0, false, {
                 fileName: "src/components/PageSection.tsx",
                 lineNumber: 15,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "pb-4"
+            }, void 0, false, {
+                fileName: "src/components/PageSection.tsx",
+                lineNumber: 18,
                 columnNumber: 9
             }, this)
         ]
