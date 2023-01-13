@@ -12050,7 +12050,7 @@ body {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-  font-family: roboto;
+  font-family: din, -apple-system, system, sans-serif;
 }
 
 .blood {
@@ -12095,6 +12095,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .newsfeed-container .date {
   width: 150px;
+}
+
+.navbar-brand {
+  color: #eadc88;
+  font-family: Rubik Dirt;
+}
+
+img.navbar-brand {
+  min-width: 100px;
+  max-width: 500px;
+  margin-bottom: -3vh;
 }
 
 /*# sourceMappingURL=index.37ed2979.css.map */

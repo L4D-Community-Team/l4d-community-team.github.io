@@ -23804,75 +23804,69 @@ var _reactRouterDom = require("react-router-dom");
 var _mainPage = require("pages/MainPage");
 var _logoPng = require("~/public/images/logo.png");
 var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+var _navBar = require("components/NavBar");
 function App(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "container",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "row pb-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "col",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "img-fluid",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navBar.NavBar), {}, void 0, false, {
+                fileName: "src/App.tsx",
+                lineNumber: 20,
+                columnNumber: 5
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "page-container m-sm-0 p-sm-0 p-md-3 pb-md-5",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "navbar-brand d-block d-sm-none img img-fluid col-11 p-1",
                             src: (0, _logoPngDefault.default)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 22,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 21,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/App.tsx",
-                    lineNumber: 20,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "page-container m-sm-0 p-sm-0 p-md-3 pb-md-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "row",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "col",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                    path: "/",
-                                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                            lineNumber: 24,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "row",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "col",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                        path: "/",
+                                        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                                    }, void 0, false, {
+                                        fileName: "src/App.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 15
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "src/App.tsx",
-                                    lineNumber: 30,
-                                    columnNumber: 15
+                                    lineNumber: 28,
+                                    columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 29,
-                                columnNumber: 13
+                                lineNumber: 27,
+                                columnNumber: 11
                             }, this)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 28,
-                            columnNumber: 11
+                            lineNumber: 26,
+                            columnNumber: 9
                         }, this)
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, this)
-                }, void 0, false, {
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 26,
+                    lineNumber: 22,
                     columnNumber: 7
                 }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/App.tsx",
-            lineNumber: 19,
-            columnNumber: 5
-        }, this)
-    }, void 0, false);
+            }, void 0, false, {
+                fileName: "src/App.tsx",
+                lineNumber: 21,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true);
 }
 _c = App;
 exports.default = App;
@@ -23884,7 +23878,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","bootstrap/dist/js/bootstrap":"9AxfY","~/scss/fonts.scss":"kc1Vl","~/scss/site.scss":"c7NQ3","bootstrap/dist/css/bootstrap.min.css":"i5LP7","~/public/images/logo.png":"fWCjV"}],"gkKU3":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","bootstrap/dist/js/bootstrap":"9AxfY","~/scss/fonts.scss":"kc1Vl","~/scss/site.scss":"c7NQ3","bootstrap/dist/css/bootstrap.min.css":"i5LP7","components/NavBar":"4JJXO","~/public/images/logo.png":"fWCjV"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -29534,7 +29528,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MainPage", ()=>MainPage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _newsFeed = require("components/NewsFeed");
-var _section = require("components/Section");
+var _pageSection = require("components/PageSection");
 var _newsFeedData = require("data/NewsFeedData");
 var _react = require("react");
 function MainPage() {
@@ -29546,7 +29540,7 @@ function MainPage() {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "container",
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pageSection.PageSection), {
                     title: "Latest News",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
                         id: "newsFeed",
@@ -29561,7 +29555,7 @@ function MainPage() {
                     lineNumber: 15,
                     columnNumber: 13
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pageSection.PageSection), {
                     title: "New Year New Us",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: "You can write news articles this way if you like. I've not quite decided which way I like it!"
@@ -29592,7 +29586,7 @@ $RefreshReg$(_c, "MainPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu","data/NewsFeedData":"dWXd4","components/Section":"9mXYb"}],"2Ilxu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu","data/NewsFeedData":"dWXd4","components/PageSection":"atOzp"}],"2Ilxu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4ea7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30202,19 +30196,19 @@ $RefreshReg$(_c, "GetNewsFeed");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9mXYb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0ce6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"atOzp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d571 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0ce6.prelude(module);
+$parcel$ReactRefreshHelpers$d571.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Section", ()=>Section);
+parcelHelpers.export(exports, "PageSection", ()=>PageSection);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-function Section(props) {
+function PageSection(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -30223,12 +30217,12 @@ function Section(props) {
                     className: "blood text-uppercase",
                     children: props.title
                 }, void 0, false, {
-                    fileName: "src/components/Section.tsx",
+                    fileName: "src/components/PageSection.tsx",
                     lineNumber: 13,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
-                fileName: "src/components/Section.tsx",
+                fileName: "src/components/PageSection.tsx",
                 lineNumber: 12,
                 columnNumber: 9
             }, this),
@@ -30236,18 +30230,18 @@ function Section(props) {
                 className: "row",
                 children: props.children
             }, void 0, false, {
-                fileName: "src/components/Section.tsx",
+                fileName: "src/components/PageSection.tsx",
                 lineNumber: 15,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true);
 }
-_c = Section;
+_c = PageSection;
 var _c;
-$RefreshReg$(_c, "Section");
+$RefreshReg$(_c, "PageSection");
 
-  $parcel$ReactRefreshHelpers$0ce6.postlude(module);
+  $parcel$ReactRefreshHelpers$d571.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -35980,7 +35974,111 @@ var createPopper = /*#__PURE__*/ (0, _createPopperJs.popperGenerator)({
     defaultModifiers: defaultModifiers
 }); // eslint-disable-next-line import/no-unused-modules
 
-},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kc1Vl":[function() {},{}],"c7NQ3":[function() {},{}],"i5LP7":[function() {},{}],"fWCjV":[function(require,module,exports) {
+},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kc1Vl":[function() {},{}],"c7NQ3":[function() {},{}],"i5LP7":[function() {},{}],"4JJXO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9827 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9827.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NavBar", ()=>NavBar);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _logoPng = require("~/public/images/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+function NavBar() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+            className: "navbar navbar-dark bg-dark",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "navbar-brand d-none d-sm-block p-2",
+                    src: (0, _logoPngDefault.default)
+                }, void 0, false, {
+                    fileName: "src/components/NavBar.tsx",
+                    lineNumber: 7,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "navbar-toggler",
+                    type: "button",
+                    "data-toggle": "collapse",
+                    "data-target": "#navbarContent",
+                    "aria-controls": "navbarContent",
+                    "aria-expanded": "false",
+                    "aria-label": "Toggle navigation",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "navbar-toggler-icon"
+                    }, void 0, false, {
+                        fileName: "src/components/NavBar.tsx",
+                        lineNumber: 10,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/NavBar.tsx",
+                    lineNumber: 9,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "collapse navbar-collapse",
+                    id: "navbarContent",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        className: "navbar-nav mr-auto",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "nav-item active",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "nav-link",
+                                href: "#",
+                                children: [
+                                    "Home ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "sr-only"
+                                    }, void 0, false, {
+                                        fileName: "src/components/NavBar.tsx",
+                                        lineNumber: 15,
+                                        columnNumber: 67
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/NavBar.tsx",
+                                lineNumber: 15,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/NavBar.tsx",
+                            lineNumber: 14,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/components/NavBar.tsx",
+                        lineNumber: 13,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/NavBar.tsx",
+                    lineNumber: 12,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/NavBar.tsx",
+            lineNumber: 6,
+            columnNumber: 9
+        }, this)
+    }, void 0, false);
+}
+_c = NavBar;
+var _c;
+$RefreshReg$(_c, "NavBar");
+
+  $parcel$ReactRefreshHelpers$9827.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/images/logo.png":"fWCjV"}],"fWCjV":[function(require,module,exports) {
 module.exports = require("797ec86229458dea").getBundleURL("6EXJA") + "logo.b5bfa736.png" + "?" + Date.now();
 
 },{"797ec86229458dea":"lgJ39"}],"lgJ39":[function(require,module,exports) {
