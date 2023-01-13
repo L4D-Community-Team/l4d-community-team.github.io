@@ -23802,7 +23802,8 @@ var _siteScss = require("~/scss/site.scss");
 var _fontsScss = require("~/scss/fonts.scss");
 var _reactRouterDom = require("react-router-dom");
 var _mainPage = require("pages/MainPage");
-var _logo = require("components/Logo");
+var _logoPng = require("~/public/images/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
 function App(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -23812,46 +23813,56 @@ function App(props) {
                     className: "row pb-5",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "col",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _logo.Logo), {}, void 0, false, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "img-fluid",
+                            src: (0, _logoPngDefault.default)
+                        }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 23,
-                            columnNumber: 15
+                            lineNumber: 22,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 22,
+                        lineNumber: 21,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 21,
+                    lineNumber: 20,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "row",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                            path: "/",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "col",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                path: "/",
+                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 29,
+                                columnNumber: 13
+                            }, this)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 29,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 28,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, this)
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 27,
+                    lineNumber: 26,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 20,
+            lineNumber: 19,
             columnNumber: 5
         }, this)
     }, void 0, false);
@@ -23866,7 +23877,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","components/Logo":"ice3L","bootstrap/dist/js/bootstrap":"9AxfY","~/scss/fonts.scss":"kc1Vl","~/scss/site.scss":"c7NQ3","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"gkKU3":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","bootstrap/dist/js/bootstrap":"9AxfY","~/scss/fonts.scss":"kc1Vl","~/scss/site.scss":"c7NQ3","bootstrap/dist/css/bootstrap.min.css":"i5LP7","~/public/images/logo.png":"fWCjV"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -29516,6 +29527,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MainPage", ()=>MainPage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _newsFeed = require("components/NewsFeed");
+var _section = require("components/Section");
 var _newsFeedData = require("data/NewsFeedData");
 var _react = require("react");
 function MainPage() {
@@ -29526,25 +29538,22 @@ function MainPage() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "container",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    className: "blood",
-                    children: "LATEST NEWS"
-                }, void 0, false, {
-                    fileName: "src/pages/MainPage.tsx",
-                    lineNumber: 15,
-                    columnNumber: 13
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
+                title: "Latest News",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
                     id: "newsFeed",
                     entries: newsFeed
                 }, void 0, false, {
                     fileName: "src/pages/MainPage.tsx",
                     lineNumber: 16,
-                    columnNumber: 13
+                    columnNumber: 17
                 }, this)
-            ]
-        }, void 0, true, {
+            }, void 0, false, {
+                fileName: "src/pages/MainPage.tsx",
+                lineNumber: 15,
+                columnNumber: 13
+            }, this)
+        }, void 0, false, {
             fileName: "src/pages/MainPage.tsx",
             lineNumber: 14,
             columnNumber: 9
@@ -29560,7 +29569,7 @@ $RefreshReg$(_c, "MainPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu","data/NewsFeedData":"dWXd4"}],"2Ilxu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu","data/NewsFeedData":"dWXd4","components/Section":"9mXYb"}],"2Ilxu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4ea7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29598,8 +29607,7 @@ function NewsFeed(props) {
                     children: props.entries.slice(0, showCount).map((entry, idx)=>{
                         const headerId = `newsItemHeader${idx}`;
                         const collapseId = `newsItemCollapse${idx}`;
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "accordion",
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "accordion-item",
                                 children: [
@@ -29613,25 +29621,32 @@ function NewsFeed(props) {
                                             "data-bs-target": `#${collapseId}`,
                                             "aria-expanded": "false",
                                             "aria-controls": collapseId,
-                                            children: [
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "col-2",
-                                                    children: entry.date.toLocaleDateString()
-                                                }, void 0, false, {
-                                                    fileName: "src/components/NewsFeed.tsx",
-                                                    lineNumber: 38,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                    className: "col-10",
-                                                    children: entry.title
-                                                }, void 0, false, {
-                                                    fileName: "src/components/NewsFeed.tsx",
-                                                    lineNumber: 41,
-                                                    columnNumber: 37
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "row",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                        className: "col-sm font-weight-bold date",
+                                                        children: entry.date.toLocaleDateString()
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/NewsFeed.tsx",
+                                                        lineNumber: 39,
+                                                        columnNumber: 41
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                        className: "col-sm pt-2 pl-4",
+                                                        children: entry.title
+                                                    }, void 0, false, {
+                                                        fileName: "src/components/NewsFeed.tsx",
+                                                        lineNumber: 42,
+                                                        columnNumber: 41
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/components/NewsFeed.tsx",
+                                                lineNumber: 38,
+                                                columnNumber: 37
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "src/components/NewsFeed.tsx",
                                             lineNumber: 37,
                                             columnNumber: 33
@@ -29649,20 +29664,16 @@ function NewsFeed(props) {
                                         children: entry.body
                                     }, void 0, false, {
                                         fileName: "src/components/NewsFeed.tsx",
-                                        lineNumber: 46,
+                                        lineNumber: 48,
                                         columnNumber: 29
                                     }, this)
                                 ]
-                            }, void 0, true, {
+                            }, idx, true, {
                                 fileName: "src/components/NewsFeed.tsx",
                                 lineNumber: 35,
                                 columnNumber: 25
                             }, this)
-                        }, void 0, false, {
-                            fileName: "src/components/NewsFeed.tsx",
-                            lineNumber: 34,
-                            columnNumber: 28
-                        }, this);
+                        }, void 0, false);
                     })
                 }, void 0, false, {
                     fileName: "src/components/NewsFeed.tsx",
@@ -29677,12 +29688,12 @@ function NewsFeed(props) {
                         children: "Show More"
                     }, void 0, false, {
                         fileName: "src/components/NewsFeed.tsx",
-                        lineNumber: 55,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/NewsFeed.tsx",
-                    lineNumber: 54,
+                    lineNumber: 56,
                     columnNumber: 49
                 }, this) : null
             ]
@@ -30167,76 +30178,57 @@ $RefreshReg$(_c, "GetNewsFeed");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ice3L":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c937 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9mXYb":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ce6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c937.prelude(module);
+$parcel$ReactRefreshHelpers$0ce6.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Logo", ()=>Logo);
+parcelHelpers.export(exports, "Section", ()=>Section);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _logoPng = require("~/public/images/logo.png");
-var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
-function Logo() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-        src: (0, _logoPngDefault.default)
-    }, void 0, false, {
-        fileName: "src/components/Logo.tsx",
-        lineNumber: 6,
-        columnNumber: 12
-    }, this);
+function Section(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "row",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "blood text-uppercase",
+                    children: props.title
+                }, void 0, false, {
+                    fileName: "src/components/Section.tsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/Section.tsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "row",
+                children: props.children
+            }, void 0, false, {
+                fileName: "src/components/Section.tsx",
+                lineNumber: 15,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true);
 }
-_c = Logo;
+_c = Section;
 var _c;
-$RefreshReg$(_c, "Logo");
+$RefreshReg$(_c, "Section");
 
-  $parcel$ReactRefreshHelpers$c937.postlude(module);
+  $parcel$ReactRefreshHelpers$0ce6.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/images/logo.png":"fWCjV"}],"fWCjV":[function(require,module,exports) {
-module.exports = require("797ec86229458dea").getBundleURL("6EXJA") + "logo.b5bfa736.png" + "?" + Date.now();
-
-},{"797ec86229458dea":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"9AxfY":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9AxfY":[function(require,module,exports) {
 /*!
   * Bootstrap v5.2.3 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -35964,6 +35956,43 @@ var createPopper = /*#__PURE__*/ (0, _createPopperJs.popperGenerator)({
     defaultModifiers: defaultModifiers
 }); // eslint-disable-next-line import/no-unused-modules
 
-},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kc1Vl":[function() {},{}],"c7NQ3":[function() {},{}],"i5LP7":[function() {},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequireebb9")
+},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kc1Vl":[function() {},{}],"c7NQ3":[function() {},{}],"i5LP7":[function() {},{}],"fWCjV":[function(require,module,exports) {
+module.exports = require("797ec86229458dea").getBundleURL("6EXJA") + "logo.b5bfa736.png" + "?" + Date.now();
+
+},{"797ec86229458dea":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequireebb9")
 
 //# sourceMappingURL=index.2d3ace14.js.map
