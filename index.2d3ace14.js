@@ -23814,9 +23814,9 @@ function App(props) {
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "container",
+                className: "container-md p-0",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "page-container m-sm-0 p-sm-0 p-md-3 pb-md-5",
+                    className: "page-container",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "navbar-brand d-block d-sm-none img img-fluid col-11 p-1",
