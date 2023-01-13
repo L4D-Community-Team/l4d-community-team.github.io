@@ -23819,7 +23819,7 @@ function App(props) {
                     className: "page-container",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "navbar-brand d-block d-sm-none img img-fluid col-11 p-1",
+                            className: "navbar-brand d-block d-sm-none img img-fluid col-11 p-1 pb-5",
                             src: (0, _logoPngDefault.default)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
@@ -29678,7 +29678,7 @@ function NewsFeed(props) {
                                         id: collapseId,
                                         "aria-labelledby": headerId,
                                         "data-bs-parent": props.id,
-                                        children: entry.body
+                                        children: entry.content
                                     }, void 0, false, {
                                         fileName: "src/components/NewsFeed.tsx",
                                         lineNumber: 48,
@@ -29749,7 +29749,7 @@ function GetNewsFeed() {
         {
             date: new Date("2023-01-01"),
             title: "News Entry 1",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     children: "Define news entries like this"
                 }, void 0, false, {
@@ -29762,7 +29762,7 @@ function GetNewsFeed() {
         {
             date: new Date("2023-01-02"),
             title: "Changelog 2023-01-01",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -29797,7 +29797,7 @@ function GetNewsFeed() {
         {
             date: new Date("2023-01-03"),
             title: "You can even include pictures... It's just JSX!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: "https://i.redd.it/lobm31fcs0r71.png",
                     style: {
@@ -29814,375 +29814,375 @@ function GetNewsFeed() {
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 37,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 42,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 47,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 52,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 57,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 62,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 67,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 72,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 77,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 82,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 87,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 92,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 97,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 102,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 107,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 112,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 117,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 122,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 127,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 132,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 137,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 142,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 147,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 152,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 157,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 162,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 167,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 172,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 177,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 182,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 187,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 192,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 197,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         },
         {
             date: new Date("2023-01-01"),
             title: "Step Count Test!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Woop Woop!"
             }, void 0, false, {
                 fileName: "src/data/NewsFeedData.tsx",
                 lineNumber: 202,
-                columnNumber: 19
+                columnNumber: 22
             }, this)
         }
     ];
