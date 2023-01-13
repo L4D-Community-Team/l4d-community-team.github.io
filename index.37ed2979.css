@@ -1,17 +1,13 @@
-p h1 h2 h3 h4 h5 h6 {
-  font-family: roboto;
+@import "https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@font-face {
+  font-family: Futurot;
+  src: url("Futurot.0995c4d3.woff") format("woff2");
 }
 
-body {
-  background-color: #19232c;
-  background-image: url("background.cf3d93ce.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 3000px;
-}
-
-.page-title {
-  font-family: futurot;
+@font-face {
+  font-family: din;
+  src: url("DIN-Light.82c9e058.woff") format("woff2");
 }
 
 :root {
@@ -12044,4 +12040,49 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=index.2985691a.css.map */
+body {
+  color: #eadc88;
+  background-color: #19232c;
+  background-image: url("background.cf3d93ce.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 2500px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: roboto;
+}
+
+.blood {
+  color: #ff5e14;
+}
+
+.rot {
+  font-family: futurot;
+}
+
+.page-title {
+  letter-spacing: 3px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: futurot;
+  font-size: 3em;
+  font-weight: lighter;
+}
+
+.card {
+  color: #19232c;
+  background-color: #e7dcd5;
+}
+
+.card h1, h2, h3, h4, h5, h6 {
+  font-family: Rubik Dirt;
+  font-size: 38px;
+}
+
+.card p, li {
+  font-family: din, -apple-system, system, sans-serif;
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=index.37ed2979.css.map */

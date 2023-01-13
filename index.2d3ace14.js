@@ -23798,12 +23798,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _bootstrap = require("bootstrap/dist/js/bootstrap");
-var _siteCss = require("styles/site.css");
-var _fontsCss = require("styles/fonts.css");
+var _siteScss = require("~/scss/site.scss");
+var _fontsScss = require("~/scss/fonts.scss");
 var _reactRouterDom = require("react-router-dom");
 var _mainPage = require("pages/MainPage");
 var _logo = require("components/Logo");
-var _newsFeedData = require("data/NewsFeedData");
 function App(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -23833,9 +23832,7 @@ function App(props) {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                             path: "/",
-                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {
-                                newsFeedEntries: (0, _newsFeedData.GetNewsFeed)()
-                            }, void 0, false, void 0, void 0)
+                            element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
                             lineNumber: 29,
@@ -23869,7 +23866,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","styles/site.css":"9Ehha","styles/fonts.css":"dkwGW","components/Logo":"ice3L","bootstrap/dist/css/bootstrap.min.css":"i5LP7","bootstrap/dist/js/bootstrap":"9AxfY","data/NewsFeedData":"dWXd4"}],"gkKU3":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","pages/MainPage":"89L9o","components/Logo":"ice3L","bootstrap/dist/js/bootstrap":"9AxfY","~/scss/fonts.scss":"kc1Vl","~/scss/site.scss":"c7NQ3","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -29519,8 +29516,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MainPage", ()=>MainPage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _newsFeed = require("components/NewsFeed");
+var _newsFeedData = require("data/NewsFeedData");
 var _react = require("react");
-function MainPage(props) {
+function MainPage() {
+    // Treat this like it's an API call for now, even though it's not
+    const newsFeed = (0, _newsFeedData.GetNewsFeed)();
+    newsFeed.sort((a, b)=>a.date.getTime() - b.date.getTime());
+    newsFeed.reverse();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "container",
@@ -29530,35 +29532,21 @@ function MainPage(props) {
                     children: "LATEST NEWS"
                 }, void 0, false, {
                     fileName: "src/pages/MainPage.tsx",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 13
                 }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "card",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "card-body",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
-                            id: "newsFeed",
-                            entries: props.newsFeedEntries
-                        }, void 0, false, {
-                            fileName: "src/pages/MainPage.tsx",
-                            lineNumber: 17,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/pages/MainPage.tsx",
-                        lineNumber: 16,
-                        columnNumber: 17
-                    }, this)
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
+                    id: "newsFeed",
+                    entries: newsFeed
                 }, void 0, false, {
                     fileName: "src/pages/MainPage.tsx",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/pages/MainPage.tsx",
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 9
         }, this)
     }, void 0, false);
@@ -29572,7 +29560,7 @@ $RefreshReg$(_c, "MainPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu"}],"2Ilxu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","components/NewsFeed":"2Ilxu","data/NewsFeedData":"dWXd4"}],"2Ilxu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4ea7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29584,68 +29572,128 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "NewsFeed", ()=>NewsFeed);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _s = $RefreshSig$();
 function NewsFeed(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "accordion",
-        id: props.id,
-        children: props.entries.map((entry, idx)=>{
-            const headerId = `newsItemHeader${idx}`;
-            const collapseId = `newsItemCollapse${idx}`;
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "accordion",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "accordion-item",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            className: "accordion-header",
-                            id: headerId,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "accordion-button collapsed",
-                                type: "button",
-                                "data-bs-toggle": "collapse",
-                                "data-bs-target": `#${collapseId}`,
-                                "aria-expanded": "false",
-                                "aria-controls": collapseId,
-                                children: entry.title
-                            }, void 0, false, {
+    _s();
+    const initialCount = 5;
+    const stepCount = 5;
+    const [showCount, setShowCount] = _react.useState(initialCount);
+    function incrementShowCount() {
+        setShowCount((c)=>c + stepCount);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "card newsfeed-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "card-body"
+                }, void 0, false, {
+                    fileName: "src/components/NewsFeed.tsx",
+                    lineNumber: 28,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "accordion",
+                    id: props.id,
+                    children: props.entries.slice(0, showCount).map((entry, idx)=>{
+                        const headerId = `newsItemHeader${idx}`;
+                        const collapseId = `newsItemCollapse${idx}`;
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "accordion",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "accordion-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                        className: "accordion-header",
+                                        id: headerId,
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "accordion-button collapsed",
+                                            type: "button",
+                                            "data-bs-toggle": "collapse",
+                                            "data-bs-target": `#${collapseId}`,
+                                            "aria-expanded": "false",
+                                            "aria-controls": collapseId,
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "col-2",
+                                                    children: entry.date.toLocaleDateString()
+                                                }, void 0, false, {
+                                                    fileName: "src/components/NewsFeed.tsx",
+                                                    lineNumber: 38,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "col-10",
+                                                    children: entry.title
+                                                }, void 0, false, {
+                                                    fileName: "src/components/NewsFeed.tsx",
+                                                    lineNumber: 41,
+                                                    columnNumber: 37
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/NewsFeed.tsx",
+                                            lineNumber: 37,
+                                            columnNumber: 33
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/NewsFeed.tsx",
+                                        lineNumber: 36,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "accordion-collapse collapse m-3",
+                                        id: collapseId,
+                                        "aria-labelledby": headerId,
+                                        "data-bs-parent": props.id,
+                                        children: entry.body
+                                    }, void 0, false, {
+                                        fileName: "src/components/NewsFeed.tsx",
+                                        lineNumber: 46,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/NewsFeed.tsx",
-                                lineNumber: 24,
+                                lineNumber: 35,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/NewsFeed.tsx",
-                            lineNumber: 23,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "accordion-collapse collapse",
-                            id: collapseId,
-                            "aria-labelledby": headerId,
-                            "data-bs-parent": props.id,
-                            children: entry.body
-                        }, void 0, false, {
-                            fileName: "src/components/NewsFeed.tsx",
-                            lineNumber: 28,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
+                            lineNumber: 34,
+                            columnNumber: 28
+                        }, this);
+                    })
+                }, void 0, false, {
                     fileName: "src/components/NewsFeed.tsx",
-                    lineNumber: 22,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false, {
-                fileName: "src/components/NewsFeed.tsx",
-                lineNumber: 21,
-                columnNumber: 20
-            }, this);
-        })
-    }, void 0, false, {
-        fileName: "src/components/NewsFeed.tsx",
-        lineNumber: 16,
-        columnNumber: 12
-    }, this);
+                    lineNumber: 29,
+                    columnNumber: 13
+                }, this),
+                showCount < props.entries.length ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "w-100 p-2 text-center",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "#",
+                        onClick: incrementShowCount,
+                        children: "Show More"
+                    }, void 0, false, {
+                        fileName: "src/components/NewsFeed.tsx",
+                        lineNumber: 55,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/NewsFeed.tsx",
+                    lineNumber: 54,
+                    columnNumber: 49
+                }, this) : null
+            ]
+        }, void 0, true, {
+            fileName: "src/components/NewsFeed.tsx",
+            lineNumber: 27,
+            columnNumber: 9
+        }, this)
+    }, void 0, false);
 }
+_s(NewsFeed, "sDYl6yR41L1rAToifYZ75TuZCB8=");
 _c = NewsFeed;
 var _c;
 $RefreshReg$(_c, "NewsFeed");
@@ -29655,7 +29703,471 @@ $RefreshReg$(_c, "NewsFeed");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Ehha":[function() {},{}],"dkwGW":[function() {},{}],"ice3L":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dWXd4":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0da4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0da4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "GetNewsFeed", ()=>GetNewsFeed);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+function GetNewsFeed() {
+    return [
+        {
+            date: new Date("2023-01-01"),
+            title: "News Entry 1",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "Define news entries like this"
+                }, void 0, false, {
+                    fileName: "src/data/NewsFeedData.tsx",
+                    lineNumber: 11,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false)
+        },
+        {
+            date: new Date("2023-01-02"),
+            title: "Changelog 2023-01-01",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Changed some stuff"
+                        }, void 0, false, {
+                            fileName: "src/data/NewsFeedData.tsx",
+                            lineNumber: 19,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Changed some other stuff"
+                        }, void 0, false, {
+                            fileName: "src/data/NewsFeedData.tsx",
+                            lineNumber: 20,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Changed some more stuff"
+                        }, void 0, false, {
+                            fileName: "src/data/NewsFeedData.tsx",
+                            lineNumber: 21,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/data/NewsFeedData.tsx",
+                    lineNumber: 18,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false)
+        },
+        {
+            date: new Date("2023-01-03"),
+            title: "You can even include pictures... It's just JSX!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: "https://i.redd.it/lobm31fcs0r71.png",
+                    style: {
+                        width: "100%",
+                        height: "auto"
+                    }
+                }, void 0, false, {
+                    fileName: "src/data/NewsFeedData.tsx",
+                    lineNumber: 29,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 37,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 42,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 47,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 52,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 57,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 62,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 67,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 72,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 77,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 82,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 87,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 92,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 97,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 102,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 107,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 112,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 117,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 122,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 127,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 132,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 137,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 142,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 147,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 152,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 157,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 162,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 167,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 172,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 177,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 182,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 187,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 192,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 197,
+                columnNumber: 19
+            }, this)
+        },
+        {
+            date: new Date("2023-01-01"),
+            title: "Step Count Test!",
+            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Woop Woop!"
+            }, void 0, false, {
+                fileName: "src/data/NewsFeedData.tsx",
+                lineNumber: 202,
+                columnNumber: 19
+            }, this)
+        }
+    ];
+}
+_c = GetNewsFeed;
+var _c;
+$RefreshReg$(_c, "GetNewsFeed");
+
+  $parcel$ReactRefreshHelpers$0da4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ice3L":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c937 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29724,7 +30236,7 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"i5LP7":[function() {},{}],"9AxfY":[function(require,module,exports) {
+},{}],"9AxfY":[function(require,module,exports) {
 /*!
   * Bootstrap v5.2.3 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -35452,93 +35964,6 @@ var createPopper = /*#__PURE__*/ (0, _createPopperJs.popperGenerator)({
     defaultModifiers: defaultModifiers
 }); // eslint-disable-next-line import/no-unused-modules
 
-},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dWXd4":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0da4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0da4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "GetNewsFeed", ()=>GetNewsFeed);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-function GetNewsFeed() {
-    return [
-        {
-            title: "News Entry 1",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "Define news entries like this"
-                }, void 0, false, {
-                    fileName: "src/data/NewsFeedData.tsx",
-                    lineNumber: 10,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false)
-        },
-        {
-            title: "Changelog 2023-01-01",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Changed some stuff"
-                        }, void 0, false, {
-                            fileName: "src/data/NewsFeedData.tsx",
-                            lineNumber: 17,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Changed some other stuff"
-                        }, void 0, false, {
-                            fileName: "src/data/NewsFeedData.tsx",
-                            lineNumber: 18,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Changed some more stuff"
-                        }, void 0, false, {
-                            fileName: "src/data/NewsFeedData.tsx",
-                            lineNumber: 19,
-                            columnNumber: 21
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/data/NewsFeedData.tsx",
-                    lineNumber: 16,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false)
-        },
-        {
-            title: "You can even include pictures... It's just JSX!",
-            body: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: "https://i.redd.it/lobm31fcs0r71.png",
-                    style: {
-                        width: "100%",
-                        height: "auto"
-                    }
-                }, void 0, false, {
-                    fileName: "src/data/NewsFeedData.tsx",
-                    lineNumber: 26,
-                    columnNumber: 17
-                }, this)
-            }, void 0, false)
-        }
-    ];
-}
-_c = GetNewsFeed;
-var _c;
-$RefreshReg$(_c, "GetNewsFeed");
-
-  $parcel$ReactRefreshHelpers$0da4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequireebb9")
+},{"./createPopper.js":"cHuNp","./modifiers/eventListeners.js":"hBKsL","./modifiers/popperOffsets.js":"6I679","./modifiers/computeStyles.js":"gDlm2","./modifiers/applyStyles.js":"4iMn4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kc1Vl":[function() {},{}],"c7NQ3":[function() {},{}],"i5LP7":[function() {},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequireebb9")
 
 //# sourceMappingURL=index.2d3ace14.js.map
