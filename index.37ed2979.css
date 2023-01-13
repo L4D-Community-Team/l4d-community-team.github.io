@@ -12041,12 +12041,12 @@ textarea.form-control-lg {
 }
 
 body {
-  color: #eadc88;
+  color: #e7dcd5;
   background-color: #19232c;
   background-image: url("background.cf3d93ce.jpg");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 2500px;
+  background-size: 3000px;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -12085,8 +12085,16 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
 }
 
+.page-container {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(2px);
+  background: #19232c66;
+  box-shadow: 0 4px 30px #0000001a;
+}
+
 .newsfeed-container .date {
-  max-width: 150px;
+  width: 150px;
 }
 
 /*# sourceMappingURL=index.37ed2979.css.map */

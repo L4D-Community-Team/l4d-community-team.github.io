@@ -23832,13 +23832,20 @@ function App(props) {
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "row",
+                    className: "page-container m-sm-0 p-sm-0 p-md-3 pb-md-5",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "col",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                                path: "/",
-                                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                        className: "row",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "col",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                                    path: "/",
+                                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainPage.MainPage), {}, void 0, false, void 0, void 0)
+                                }, void 0, false, {
+                                    fileName: "src/App.tsx",
+                                    lineNumber: 30,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
                                 lineNumber: 29,
@@ -29538,22 +29545,38 @@ function MainPage() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "container",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
-                title: "Latest News",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
-                    id: "newsFeed",
-                    entries: newsFeed
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
+                    title: "Latest News",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _newsFeed.NewsFeed), {
+                        id: "newsFeed",
+                        entries: newsFeed
+                    }, void 0, false, {
+                        fileName: "src/pages/MainPage.tsx",
+                        lineNumber: 16,
+                        columnNumber: 17
+                    }, this)
                 }, void 0, false, {
                     fileName: "src/pages/MainPage.tsx",
-                    lineNumber: 16,
-                    columnNumber: 17
+                    lineNumber: 15,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _section.Section), {
+                    title: "New Year New Us",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "You can write news articles this way if you like. I've not quite decided which way I like it!"
+                    }, void 0, false, {
+                        fileName: "src/pages/MainPage.tsx",
+                        lineNumber: 19,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/pages/MainPage.tsx",
+                    lineNumber: 18,
+                    columnNumber: 13
                 }, this)
-            }, void 0, false, {
-                fileName: "src/pages/MainPage.tsx",
-                lineNumber: 15,
-                columnNumber: 13
-            }, this)
-        }, void 0, false, {
+            ]
+        }, void 0, true, {
             fileName: "src/pages/MainPage.tsx",
             lineNumber: 14,
             columnNumber: 9
@@ -30195,7 +30218,7 @@ function Section(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "row",
+                className: "row pt-5",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                     className: "blood text-uppercase",
                     children: props.title
