@@ -29622,10 +29622,10 @@ function NewsFeed(props) {
                                             "aria-expanded": "false",
                                             "aria-controls": collapseId,
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "row",
+                                                className: "row w-100",
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "col-4 font-weight-bold date",
+                                                        className: "col-sm-12 col-md-6 font-weight-bold date",
                                                         children: entry.date.toLocaleDateString()
                                                     }, void 0, false, {
                                                         fileName: "src/components/NewsFeed.tsx",
@@ -29633,7 +29633,7 @@ function NewsFeed(props) {
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                        className: "col-8 pt-2 pl-4",
+                                                        className: "col-sm-12 col-md-6 pt-2 pl-4",
                                                         children: entry.title
                                                     }, void 0, false, {
                                                         fileName: "src/components/NewsFeed.tsx",
